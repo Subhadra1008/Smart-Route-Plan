@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Route Planner</title>
+    <link rel="stylesheet" href="smart route plan.css">
+</head>
+<body
+
+    <div class="container">
+        <header>
+            <h1>Smart Route Planner</h1>
+            <p>Load-based optimization with real-time alerts.</p>
+        </header>
+
+        <main class="app-main">
+            <div class="control-panel">
+                <h2>Plan Your Route</h2>
+                <div class="input-group">
+                    <label for="origin">Origin:</label>
+                    <input type="text" id="origin" value="Warehouse A">
+                </div>
+                <div class="input-group">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" value="Distribution Center B">
+                </div>
+                <div class="input-group">
+                    <label for="transport-mode">Transport Mode:</label>
+                    <select id="transport-mode">
+                        <option value="bus">Bus</option>
+                        <option value="car">Drive Car</option>
+                        <option value="two-wheeler">Two Wheeler</option>
+                        <option value="public-transport">Public Transport</option>
+                        <option value="walk">Walk</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="load-weight">Load Weight (tons):</label>
+                    <input type="number" id="load-weight" value="25" min="1">
+                </div>
+                <div class="input-group">
+                    <label for="weather-condition">Simulated Weather:</label>
+                    <select id="weather-condition">
+                        <option value="clear">Clear</option>
+                        <option value="rain">Heavy Rain</option>
+                        <option value="snow">Snow/Ice</option>
+                    </select>
+                </div>
+                <button id="plan-route-btn">Plan Route</button>
+            </div>
+
+            <div class="map-container">
+                <div id="map-placeholder">
+                    <div class="route-info-box">
+                        <h3>Optimal Route</h3>
+                        <p id="route-details">Click "Plan Route" to see a route.</p>
+                        <p id="total-time" class="total-time"></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+         <section class="alerts-panel">
+            <h2>Real-time Alerts</h2>
+            <ul id="alerts-list">
+                <li><span class="alert-type traffic">Traffic:</span> Heavy traffic reported on I-95 North.</li>
+                <li><span class="alert-type weather">Weather:</span> Heavy rain forecast for the evening.</li>
+                <li><span class="alert-type regulation">Regulation:</span> Bridge weight limit (20 tons) ahead on secondary route.</li>
+            </ul>
+        </section>
+    </div>
+
+    <script src="smart route plan.js"></script>
+</body>
+</html>
